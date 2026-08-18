@@ -1,0 +1,114 @@
+C*******************************************************************************
+C
+C                  INTEGRATED WATER FLOW MODEL (IWFM)
+C                      *** IWFM-2024.2.1594 ***
+C
+C*******************************************************************************
+C
+C                   ROOT DEPTH FRACTIONS DATA FILE
+C                       Root Zone Component
+C
+C             Project:  C2VSim Fine Grid (C2VSimFG)
+C                       California Central Valley Groundwater-Surface Water Simulation Model
+C             Filename: C2VSimFG_NonPondedCrop_RootDepthFracs.dat
+C             Version:  C2VSimFG_v1.5     May 2025
+C             
+C*******************************************************************************
+C
+C                         ***** Version 1.5 Model Disclaimer *****
+C
+C          This is Version 1.5 of C2VSimFG and is subject to change.  Users of
+C          this version should be aware that this model is undergoing active
+C          development and adjustment. Users of this model do so at their own
+C          risk subject to the GNU General Public License below. The Department 
+C          does not guarantee the accuracy, completeness, or timeliness of the 
+C          information provided. Neither the Department of Water Resources nor 
+C          any of the sources of the information used by the Department in the
+C          development of this model shall be responsible for any errors or 
+C          omissions, for the use, or results obtained from the use of this model.
+C
+C*******************************************************************************
+C
+C  California Central Valley Groundwater-Surface Water Flow Model - Fine Grid (C2VSimFG)
+C  Copyright (C) 2012-2025
+C  State of California, Department of Water Resources
+C
+C  This model is free. You can redistribute it and/or modify it
+C  under the terms of the GNU General Public License as published
+C  by the Free Software Foundation; either version 2 of the License,
+C  or (at your option) any later version.
+C
+C  This model is distributed WITHOUT ANY WARRANTY; without even
+C  the implied warranty of MERCHANTABILITY or FITNESS FOR A
+C  PARTICULAR PURPOSE.  See the GNU General Public License for
+C  more details. (http://www.gnu.org/licenses/gpl.html)
+C
+C  The GNU General Public License is available from the Free Software
+C  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+C
+C  For technical support, e-mail: C2VSimFGtechsupport@water.ca.gov
+C
+C
+C    C2VSimFG/SGMA Contact:
+C          Craig Altare,  Section Manager, Modeling and Tools Support, 
+C                         Sustainable Groundwater Management Office, DWR
+C            craig.altare@water.ca.gov
+C
+C    IWFM Contact:
+C          Emin Can Dogrul PhD, PE, Senior Engineer, DWR
+C            can.dogrul@water.ca.gov
+C
+C*******************************************************************************
+C                           File Description
+C
+C   This data file contains a set of rooting depths given as a fraction of the 
+C   maximum rooting depth to represent the root growth for non-ponded and ponded 
+C   crops. 
+C
+C*******************************************************************************
+C               Root Depth Fractions Data Specifications
+C
+C   NCOLRDF ; Number of root depth fractions data columns
+C   NSPRDF  ; Number of time steps to update the root depth fractions
+C              * Enter any number if time-tracking option is on
+C   NFQRDF  ; Repetition frequency of the root depth fractions data 
+C              * Enter 0 if full time series data is supplied
+C              * Enter any number if time-tracking option is on
+C   DSSFL  ; The name of the DSS file for data input 
+C              * Leave blank if DSS file is not used for data input
+C
+C-------------------------------------------------------------------------------
+C         VALUE                                      DESCRIPTION
+C-------------------------------------------------------------------------------
+          20                                         / NCOLRDF
+          1                                          / NSPRDF  
+          0                                          / NFQRDF
+                                                     / DSSFL
+C----------------------------------------------------------------------------------------------
+C                            Root Depth Fractions 
+C                            (READ FROM THIS FILE)
+C
+C   List the root depth fractions (between 0.0 and 1.0) data below, if it will not be read from
+C   a DSS file (i.e. DSSFL is left blank above).
+C
+C   TIME ;  Time
+C   RDFRC;  Root depths as a fraction of the maximum rooting depth; [dimensionless]
+C
+C   *** Set all root depth fractions to 1.0 to retain soil moisture storage throughout the year
+C
+C------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+C          TIME  RDFRC[1]  RDFRC[2]  RDFRC[3] ... RTRNF[NCOLRDF] 
+C                       GR      CO      SB      CN      DB      SA      FL      AL      PA      TP      TF      CU      OG      PO      TR      AP      OR      CS      VI      ID
+C--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+10/31/4000_24:00        1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1
+11/30/4000_24:00        1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1
+12/31/4000_24:00        1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1
+01/31/4000_24:00        1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1
+02/29/4000_24:00        1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1
+03/31/4000_24:00        1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1
+04/30/4000_24:00        1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1
+05/31/4000_24:00        1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1
+06/30/4000_24:00        1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1
+07/31/4000_24:00        1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1
+08/31/4000_24:00        1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1
+09/30/4000_24:00        1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1       1

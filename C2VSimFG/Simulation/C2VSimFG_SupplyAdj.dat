@@ -1,0 +1,114 @@
+C*******************************************************************************
+C
+C                  INTEGRATED WATER FLOW MODEL (IWFM)
+C                      *** IWFM-2024.2.1594 ***
+C
+C*******************************************************************************
+C
+C                     SUPPLY ADJUSTMENT SPECIFICATIONS
+C                           for IWFM Simulation
+C
+C             Project:  C2VSim Fine Grid (C2VSimFG)
+C                       California Central Valley Groundwater-Surface Water Simulation Model
+C             Filename: C2VSimFG_SupplyAdj.dat
+C             Version:  C2VSimFG_v1.50     May 2025
+C             
+C*******************************************************************************
+C
+C                         ***** Version 1.50 Model Disclaimer *****
+C
+C          This is Version 1.50 of C2VSimFG and is subject to change.  Users of
+C          this version should be aware that this model is undergoing active
+C          development and adjustment. Users of this model do so at their own
+C          risk subject to the GNU General Public License below. The Department 
+C          does not guarantee the accuracy, completeness, or timeliness of the 
+C          information provided. Neither the Department of Water Resources nor 
+C          any of the sources of the information used by the Department in the
+C          development of this model shall be responsible for any errors or 
+C          omissions, for the use, or results obtained from the use of this model.
+C
+C*******************************************************************************
+C
+C  California Central Valley Groundwater-Surface Water Flow Model - Fine Grid (C2VSimFG)
+C  Copyright (C) 2012-2025
+C  State of California, Department of Water Resources
+C
+C  This model is free. You can redistribute it and/or modify it
+C  under the terms of the GNU General Public License as published
+C  by the Free Software Foundation; either version 2 of the License,
+C  or (at your option) any later version.
+C
+C  This model is distributed WITHOUT ANY WARRANTY; without even
+C  the implied warranty of MERCHANTABILITY or FITNESS FOR A
+C  PARTICULAR PURPOSE.  See the GNU General Public License for
+C  more details. (http://www.gnu.org/licenses/gpl.html)
+C
+C  The GNU General Public License is available from the Free Software
+C  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+C
+C  For technical support, e-mail: C2VSimFGtechsupport@water.ca.gov
+C
+C
+C    C2VSimFG/SGMA Contact:
+C          Craig Altare,  Section Manager, Modeling and Tools Support, 
+C                         Sustainable Groundwater Management Office, DWR
+C            craig.altare@water.ca.gov
+C
+C    IWFM Contact:
+C          Emin Can Dogrul PhD, PE, Senior Engineer, DWR
+C            can.dogrul@water.ca.gov
+C
+C*******************************************************************************
+C                          File Description
+C
+C   This data file contains the time series specifications for the adjustment of 
+C   surface water diversions and groundwater pumping. The data contains information  
+C   to specify if a diversion or pumping should be adjusted to meet agricultural  
+C   demand, urban demand or both. This file is required when KOPTDV is set to a  
+C   value other than 00 in the Main Control Input file.
+C
+C*******************************************************************************
+C                    Supply Adjustment Specifications
+C
+C   The following lists the time-series specifications for supply adjustment options
+C   for surface water diversions and groundwater pumping.
+C
+C   NCOLADJ;  Number of columns (or pathnames if DSS files are used) in the supply 
+C              adjustment specifications data file
+C   NSPADJ ;  Number of time steps to update the supply adjustment specifications data
+C              * Enter any number if time-tracking option is on
+C   NFQADJ ;  Repetition frequency of the supply adjustment specifications data
+C              * Enter 0 if full time series data is supplied
+C              * Enter any number if time-tracking option is on
+C   DSSFL  ;  The name of the DSS file for data input (maximum 50 characters); 
+C              * Leave blank if DSS file is not used for data input
+C
+C-------------------------------------------------------------------------------
+C         VALUE                                      DESCRIPTION
+C-------------------------------------------------------------------------------
+          3                                          / NCOLADJ
+          1                                          / NSPADJ
+          1                                          / NFQADJ
+                                                     / DSSFL
+C*******************************************************************************
+C                    Supply Adjustment Specifications Data
+C                         (READ FROM THIS FILE)
+C
+C   List the time series supply adjustment specifications data below, if it will 
+C   not be read from a DSS file (i.e. DSSFL is left blank above).
+C
+C   ITADJ;  Time
+C   KADJ;   Supply adjustment option. Enter two digits as follows:
+C           1st digit(from left):
+C                  0 = NO adjustment of supply to meet agricultural water demand
+C                  1 = YES, adjust supply to meet agricultural water demand
+C           2nd digit(from left):
+C                  0 = NO adjustment of supply to meet urban water demand
+C                  1 = YES, adjust supply to meet urban water demand
+C
+C-------------------------------------------------------------------------------
+C   ITADJ		KADJ1	KADJ2	KADJ3	
+C               	NoAdjust  UrbAdjust  AgAdjust 	
+C-------------------------------------------------------------------------------     
+    10/31/2050_24:00	00	01	10	
+

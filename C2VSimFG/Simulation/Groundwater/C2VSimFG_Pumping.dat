@@ -1,0 +1,93 @@
+#4.0
+C *** DO NOT DELETE ABOVE LINE ***
+C
+C*******************************************************************************
+C
+C                  INTEGRATED WATER FLOW MODEL (IWFM)
+C                      *** IWFM-2024.2.1594 ***
+C
+C*******************************************************************************
+C
+C                        PUMPING MAIN DATA FILE
+C                           Pumping Component
+C
+C             Project:  C2VSim Fine Grid (C2VSimFG)
+C                       California Central Valley Groundwater-Surface Water Simulation Model
+C             Filename: C2VSimFG_Pumping.dat
+C             Version:  C2VSimFG_V1.5     May 2025
+C             
+C*******************************************************************************
+C
+C                        ***** V1.5 Model Disclaimer *****
+C
+C          This is a V1.5 version of C2VSimFG and is subject to change.  Users 
+C          of this version should be aware that this model is undergoing active
+C          development and adjustment. Users of this model do so at their own
+C          risk subject to the GNU General Public License below. The Department 
+C          does not guarantee the accuracy, completeness, or timeliness of the 
+C          information provided. Neither the Department of Water Resources nor 
+C          any of the sources of the information used by the Department in the
+C          development of this model shall be responsible for any errors or 
+C          omissions, for the use, or results obtained from the use of this model.
+C
+C*******************************************************************************
+C
+C  California Central Valley Groundwater-Surface Water Flow Model (C2VSim)
+C  Copyright (C) 2012-2025
+C  State of California, Department of Water Resources
+C
+C  This model is free. You can redistribute it and/or modify it
+C  under the terms of the GNU General Public License as published
+C  by the Free Software Foundation; either version 2 of the License,
+C  or (at your option) any later version.
+C
+C  This model is distributed WITHOUT ANY WARRANTY; without even
+C  the implied warranty of MERCHANTABILITY or FITNESS FOR A
+C  PARTICULAR PURPOSE.  See the GNU General Public License for
+C  more details. (http://www.gnu.org/licenses/gpl.html)
+C
+C  The GNU General Public License is available from the Free Software
+C  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+C
+C  For technical support, e-mail: C2VSimFGtechsupport@water.ca.gov
+C
+C
+C
+C    C2VSimFG/SGMA Contact:
+C          Craig Altare,  Section Manager, Modeling and Tools Support, 
+C                         Sustainable Groundwater Management Office, DWR
+C            craig.altare@water.ca.gov
+C
+C
+C    IWFM Contact:
+C          Emin Can Dogrul PhD, PE, Senior Engineer, DWR
+C            can.dogrul@water.ca.gov
+C
+C*******************************************************************************
+C                             File Description:
+C
+C   This data file contains the file names and other relevant data that are 
+C   used for the simulation of pumping.
+C
+C*******************************************************************************
+C
+C  WELLFL     ; Well pumping specifications data file (max. 1000 characters)
+C                  * Leave blank if no wells are simulated
+C  ELEMPUMPFL ; Element pumping specifications data file (max. 1000 characters)
+C                  * Leave blank if element pumping is not simulated
+C  PUMPFL     ; Time series pumping data file (max. 1000 characters)
+C                  * Leave blank if pumping rates are not read from a file (for
+C                     instance, in a situation where pumping rates are computed 
+C                     by an external program)
+C  PUMPOUTFL  ; Output file for agricultural and urban element and well pumping
+C                  that lists pumping used by the model; this file can only be 
+C                  a text file (max. 1000 characters)
+C                  * Leave blank if this output is not desired
+C
+C-------------------------------------------------------------------------------
+C     VALUE                                  / DESCRIPTION
+C-------------------------------------------------------------------------------
+  Groundwater\C2VSimFG_WellSpec.dat          / WELLFL
+  Groundwater\C2VSimFG_ElemPump.dat          / ELEMPUMPFL
+  Groundwater\C2VSimFG_PumpRates.dat         / PUMPFL
+  ..\Results\C2VSimFG_Pumping.out             / PUMPOUTFL

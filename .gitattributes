@@ -1,0 +1,10 @@
+# Never convert line endings or treat files as text for EOL purposes: IWFM inputs must stay byte-exact.
+* -text
+# Files > 100 MB (GitHub hard limit) tracked with Git LFS
+C2VSim??/Simulation/RootZone/C2VSim??_NonPondedCrop_Area.dat filter=lfs diff=lfs merge=lfs -text
+C2VSim??/Simulation/RootZone/C2VSim??_PondedCrop_Area.dat filter=lfs diff=lfs merge=lfs -text
+C2VSim??/Simulation/RootZone/C2VSim??_NativeVeg_Area.dat filter=lfs diff=lfs merge=lfs -text
+C2VSim??/Simulation/RootZone/C2VSim??_Urban_Area.dat filter=lfs diff=lfs merge=lfs -text
+C2VSim??/Simulation/C2VSim??_Precip.dat filter=lfs diff=lfs merge=lfs -text
+C2VSim??/gis/C2VSim??_DelivArea.dbf filter=lfs diff=lfs merge=lfs -text
+C2VSim??/gis/C2VSim??_RchgArea.dbf filter=lfs diff=lfs merge=lfs -text

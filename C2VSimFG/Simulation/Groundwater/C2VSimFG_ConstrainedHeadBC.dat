@@ -1,0 +1,230 @@
+C*******************************************************************************
+C
+C                  INTEGRATED WATER FLOW MODEL (IWFM)
+C
+C*******************************************************************************
+C
+C              CONSTRAINED GENERAL HEAD BOUNDARY CONDITIONS DATA FILE
+C                        Groundwater Component
+C
+C             Project:  C2VSim Fine Grid (C2VSimFG)
+C                       California Central Valley Groundwater-Surface Water Simulation Model
+C             Filename: C2VSimFG_ConstrainedHeadBC.dat
+C             Version:  C2VSimFG_v1.5     May 2025
+C             
+C*******************************************************************************
+C
+C                         ***** Version 1.0 Model Disclaimer *****
+C
+C          This is Version 1.0 of C2VSimFG and is subject to change.  Users of
+C          this version should be aware that this model is undergoing active
+C          development and adjustment. Users of this model do so at their own
+C          risk subject to the GNU General Public License below. The Department 
+C          does not guarantee the accuracy, completeness, or timeliness of the 
+C          information provided. Neither the Department of Water Resources nor 
+C          any of the sources of the information used by the Department in the
+C          development of this model shall be responsible for any errors or 
+C          omissions, for the use, or results obtained from the use of this model.
+C
+C*******************************************************************************
+C
+C  California Central Valley Groundwater-Surface Water Flow Model - Fine Grid (C2VSimFG)
+C  Copyright (C) 2012-2021
+C  State of California, Department of Water Resources
+C
+C  This model is free. You can redistribute it and/or modify it
+C  under the terms of the GNU General Public License as published
+C  by the Free Software Foundation; either version 2 of the License,
+C  or (at your option) any later version.
+C
+C  This model is distributed WITHOUT ANY WARRANTY; without even
+C  the implied warranty of MERCHANTABILITY or FITNESS FOR A
+C  PARTICULAR PURPOSE.  See the GNU General Public License for
+C  more details. (http://www.gnu.org/licenses/gpl.html)
+C
+C  The GNU General Public License is available from the Free Software
+C  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+C
+C  For technical support, e-mail: C2VSimFGtechsupport@water.ca.gov
+C
+C
+C    C2VSimFG/SGMA Contact:
+C          Craig Altare,  Section Manager, Modeling and Tools Support, 
+C                         Sustainable Groundwater Management Office, DWR
+C            craig.altare@water.ca.gov
+C
+C    IWFM Contact:
+C          Emin Can Dogrul PhD, PE, Senior Engineer, DWR
+C            can.dogrul@water.ca.gov
+C
+C*******************************************************************************
+C                          File Description:
+C
+C   This data file lists constrained general head boundary conditions.  
+C
+C*******************************************************************************
+C
+C            Constrained general head boundary conditions specifications
+C
+C   NCGB   ;  Number of nodes with constrained general head boundary condition
+C   FACTH  ;  Conversion factor for boundary head (see variable BH below) and constraining 
+C              head (see variable LBH below) 
+C   FACTVL ;  Conversion factor for maximum boundary flow (see variable CFLOW below)
+C              It is used to convert only the spatial component of the unit; 
+C              DO NOT include the conversion factor for time component of the unit.
+C              * e.g. Unit of flow listed in this file          = AC-FT/MONTH
+C                     Consistent unit used in simulation        = CU.FT/DAY 
+C                     Enter FACTVL (AC-FT/MONTH -> CU.FT/MONTH) = 43560.0 
+C                      (conversion of MONTH -> DAY is performed automatically) 
+C   TUNITVL;  Time unit of maximum boundary flow.  This should be one  of the
+C              units recognized by HEC-DSS that are listed in the Main Control
+C              File.   
+C   FACTC  ;  Conversion factor for conductance (see variable BC below)
+C              It is used to convert only the spatial component of the unit; 
+C              DO NOT include the conversion factor for time component of the unit.
+C              * e.g. Unit of conductance listed in this file = AC/MONTH
+C                     Consistent unit used in simulation      = SQ.FT/DAY 
+C                     Enter FACTC (AC/MONTH -> SQ.FT/MONTH)   = 43560.0 
+C                      (conversion of MONTH -> DAY is performed automatically) 
+C   TUNITC ;  Time unit of conductance.  This should be one  
+C              of the units recognized by HEC-DSS that are listed in the Main Control
+C              File.  
+C   INODE  ;  Groundwater node with constrained general head boundary condition
+C   ILAYER ;  Aquifer layer that INODE belongs to
+C   ITSCOL ;  Time series boundary head value (for BH variable below) - this number 
+C              corresponds to the appropriate data column in the Time Series Boundary 
+C              Conditions Data File.
+C              * Enter 0 if this is not a time series boundary condition
+C   BH     ;  Head as the boundary conditions; [L]
+C              * Enter any value if ITSCOL is non-zero
+C   BC     ;  Conductance used for constrained general head boundary condition; [L^2/T]
+C   LBH    ;  Limiting head; [L] 
+C   ITSCOLF;  Time series maximum boundary flow value (for CFLOW variable below) - this 
+C              number corresponds to the appropriate data column in the Time Series 
+C              Boundary Conditions Data File.
+C              * Enter 0 if this is not a time series boundary condition
+C   CFLOW  ;  Maximum amount of flow for the constrained general head boundary; [L^3/T]
+C              * Enter any value if ITSCOLF is non-zero
+C
+C-------------------------------------------------------------------------------
+C   VALUE                       DESCRIPTION
+C-------------------------------------------------------------------------------
+     109                         / NGB
+     1                           / FACTH
+     1                           / FACTVL
+     1day                        / TUNITVL
+     1                           / FACTC
+     1day                        / TUNITC
+C-------------------------------------------------------------------------------
+C                  INODE                  ILAYER                  ITSCOL                      BH                      BC                     LBH                 ITSCOLF                   CFLOW                   Notes
+C-------------------------------------------------------------------------------
+                    2767                       1                       1                       0                  319.61                  371.96                       4                       0       /Black Butte Lake
+                    2768                       1                       1                       0                  179.77                  371.96                       4                       0       /Black Butte Lake
+                    2769                       1                       1                       0                  310.39                  371.96                       4                       0       /Black Butte Lake
+                    2770                       1                       1                       0                 1523.25                  371.96                       4                       0       /Black Butte Lake
+                    2771                       1                       1                       0                  227.09                  371.96                       4                       0       /Black Butte Lake
+                    2829                       1                       1                       0                  146.79                  371.96                       4                       0       /Black Butte Lake
+                    2830                       1                       1                       0                  323.63                  371.96                       4                       0       /Black Butte Lake
+                    2831                       1                       1                       0                  384.73                  371.96                       4                       0       /Black Butte Lake
+                    2832                       1                       1                       0                 1702.24                  371.96                       4                       0       /Black Butte Lake
+                    2833                       1                       1                       0                 2109.12                  371.96                       4                       0       /Black Butte Lake
+                    2834                       1                       1                       0                 1648.81                  371.96                       4                       0       /Black Butte Lake
+                    2835                       1                       1                       0                  416.24                  371.96                       4                       0       /Black Butte Lake
+                    2836                       1                       1                       0                  575.61                  371.96                       4                       0       /Black Butte Lake
+                    2837                       1                       1                       0                 1587.83                  371.96                       4                       0       /Black Butte Lake
+                    2838                       1                       1                       0                  951.94                  371.96                       4                       0       /Black Butte Lake
+                    2839                       1                       1                       0                  133.36                  371.96                       4                       0       /Black Butte Lake
+                    2899                       1                       1                       0                  895.85                  371.96                       4                       0       /Black Butte Lake
+                    2900                       1                       1                       0                  682.17                  371.96                       4                       0       /Black Butte Lake
+                    2901                       1                       1                       0                  374.09                  371.96                       4                       0       /Black Butte Lake
+                    2902                       1                       1                       0                  795.81                  371.96                       4                       0       /Black Butte Lake
+                    2903                       1                       1                       0                 1897.69                  371.96                       4                       0       /Black Butte Lake
+                    2904                       1                       1                       0                 1711.38                  371.96                       4                       0       /Black Butte Lake
+                    2905                       1                       1                       0                  131.47                  371.96                       4                       0       /Black Butte Lake
+                    2906                       1                       1                       0                  129.36                  371.96                       4                       0       /Black Butte Lake
+                    2974                       1                       1                       0                 1761.97                  371.96                       4                       0       /Black Butte Lake
+                    2975                       1                       1                       0                 2526.09                  371.96                       4                       0       /Black Butte Lake
+                    2976                       1                       1                       0                  550.82                  371.96                       4                       0       /Black Butte Lake
+                    2977                       1                       1                       0                  451.49                  371.96                       4                       0       /Black Butte Lake
+                    3043                       1                       1                       0                 1372.42                  371.96                       4                       0       /Black Butte Lake
+                    3044                       1                       1                       0                 1617.11                  371.96                       4                       0       /Black Butte Lake
+                    3045                       1                       1                       0                 2342.58                  371.96                       4                       0       /Black Butte Lake
+                    3046                       1                       1                       0                  314.46                  371.96                       4                       0       /Black Butte Lake
+                    3113                       1                       1                       0                  485.47                  371.96                       4                       0       /Black Butte Lake
+                    3114                       1                       1                       0                 1570.23                  371.96                       4                       0       /Black Butte Lake
+                    3115                       1                       1                       0                 3270.56                  371.96                       4                       0       /Black Butte Lake
+                    3116                       1                       1                       0                 2819.84                  371.96                       4                       0       /Black Butte Lake
+                    3117                       1                       1                       0                 1379.86                  371.96                       4                       0       /Black Butte Lake
+                    3179                       1                       1                       0                  170.59                  371.96                       4                       0       /Black Butte Lake
+                    3180                       1                       1                       0                  991.02                  371.96                       4                       0       /Black Butte Lake
+                    3181                       1                       1                       0                 1424.89                  371.96                       4                       0       /Black Butte Lake
+                    3182                       1                       1                       0                  874.41                  371.96                       4                       0       /Black Butte Lake
+                    3183                       1                       1                       0                 2752.71                  371.96                       4                       0       /Black Butte Lake
+                    3184                       1                       1                       0                  933.37                  371.96                       4                       0       /Black Butte Lake
+                    3242                       1                       1                       0                  265.22                  371.96                       4                       0       /Black Butte Lake
+                    3243                       1                       1                       0                   600.7                  371.96                       4                       0       /Black Butte Lake
+                    3244                       1                       1                       0                  765.51                  371.96                       4                       0       /Black Butte Lake
+                   12447                       1                       2                       0                  831.36                     105                       5                       0               /Camanche
+                   12452                       1                       2                       0                    1489                     105                       5                       0               /Camanche
+                   12599                       1                       2                       0                  303.82                     105                       5                       0               /Camanche
+                   12600                       1                       2                       0                 1069.46                     105                       5                       0               /Camanche
+                   12601                       1                       2                       0                   99.28                     105                       5                       0               /Camanche
+                   12602                       1                       2                       0                 1273.99                     105                       5                       0               /Camanche
+                   12603                       1                       2                       0                  926.21                     105                       5                       0               /Camanche
+                   12604                       1                       2                       0                  795.73                     105                       5                       0               /Camanche
+                   12605                       1                       2                       0                 1453.99                     105                       5                       0               /Camanche
+                   12606                       1                       2                       0                 1629.33                     105                       5                       0               /Camanche
+                   12607                       1                       2                       0                 1037.01                     105                       5                       0               /Camanche
+                   12608                       1                       2                       0                 1289.78                     105                       5                       0               /Camanche
+                   12609                       1                       2                       0                  1524.3                     105                       5                       0               /Camanche
+                   12751                       1                       2                       0                 2185.46                     105                       5                       0               /Camanche
+                   12752                       1                       2                       0                 2445.06                     105                       5                       0               /Camanche
+                   12753                       1                       2                       0                 1856.26                     105                       5                       0               /Camanche
+                   12754                       1                       2                       0                 1836.77                     105                       5                       0               /Camanche
+                   12755                       1                       2                       0                  1341.1                     105                       5                       0               /Camanche
+                   12756                       1                       2                       0                 1359.43                     105                       5                       0               /Camanche
+                   12757                       1                       2                       0                 1070.22                     105                       5                       0               /Camanche
+                   12758                       1                       2                       0                 1473.44                     105                       5                       0               /Camanche
+                   12759                       1                       2                       0                 1924.72                     105                       5                       0               /Camanche
+                   12760                       1                       2                       0                 1110.92                     105                       5                       0               /Camanche
+                   12761                       1                       2                       0                  881.85                     105                       5                       0               /Camanche
+                   12762                       1                       2                       0                 1125.86                     105                       5                       0               /Camanche
+                   12765                       1                       2                       0                     448                     105                       5                       0               /Camanche
+                   12766                       1                       2                       0                 1595.85                     105                       5                       0               /Camanche
+                   12892                       1                       2                       0                  923.49                     105                       5                       0               /Camanche
+                   12895                       1                       2                       0                 1473.96                     105                       5                       0               /Camanche
+                   12896                       1                       2                       0                 1130.82                     105                       5                       0               /Camanche
+                   12897                       1                       2                       0                 1239.25                     105                       5                       0               /Camanche
+                   12898                       1                       2                       0                 1253.78                     105                       5                       0               /Camanche
+                   12899                       1                       2                       0                  1083.6                     105                       5                       0               /Camanche
+                   12900                       1                       2                       0                 1474.94                     105                       5                       0               /Camanche
+                   12901                       1                       2                       0                 1284.83                     105                       5                       0               /Camanche
+                   12902                       1                       2                       0                  862.17                     105                       5                       0               /Camanche
+                   12903                       1                       2                       0                  903.54                     105                       5                       0               /Camanche
+                   12904                       1                       2                       0                 1382.43                     105                       5                       0               /Camanche
+                   12905                       1                       2                       0                 1640.47                     105                       5                       0               /Camanche
+                   13027                       1                       2                       0                 1495.56                     105                       5                       0               /Camanche
+                   13028                       1                       2                       0                 1854.16                     105                       5                       0               /Camanche
+                   13029                       1                       2                       0                 1294.55                     105                       5                       0               /Camanche
+                   13030                       1                       2                       0                 2301.35                     105                       5                       0               /Camanche
+                   13031                       1                       2                       0                  185.94                     105                       5                       0               /Camanche
+                   13151                       1                       2                       0                  548.56                     105                       5                       0               /Camanche
+                   13152                       1                       2                       0                 1256.21                     105                       5                       0               /Camanche
+                    4640                       1                       3                       0                 1079.87                  110.63                       6                       0             /Thermalito
+                    4641                       1                       3                       0                 1155.26                  110.63                       6                       0             /Thermalito
+                    4642                       1                       3                       0                  419.32                  110.63                       6                       0             /Thermalito
+                    4708                       1                       3                       0                  608.61                  110.63                       6                       0             /Thermalito
+                    4709                       1                       3                       0                 1569.28                  110.63                       6                       0             /Thermalito
+                    4710                       1                       3                       0                 1364.35                  110.63                       6                       0             /Thermalito
+                    4783                       1                       3                       0                   915.6                  110.63                       6                       0             /Thermalito
+                    4784                       1                       3                       0                 1821.37                  110.63                       6                       0             /Thermalito
+                    4785                       1                       3                       0                  2782.4                  110.63                       6                       0             /Thermalito
+                    4786                       1                       3                       0                 1210.76                  110.63                       6                       0             /Thermalito
+                    4787                       1                       3                       0                  734.78                  110.63                       6                       0             /Thermalito
+                    4867                       1                       3                       0                 1089.85                  110.63                       6                       0             /Thermalito
+                    4868                       1                       3                       0                 1387.18                  110.63                       6                       0             /Thermalito
+                    4869                       1                       3                       0                 2011.64                  110.63                       6                       0             /Thermalito
+                    4870                       1                       3                       0                  859.44                  110.63                       6                       0             /Thermalito
+                    4871                       1                       3                       0                  626.68                  110.63                       6                       0             /Thermalito
+                    4954                       1                       3                       0                  967.34                  110.63                       6                       0             /Thermalito
+
