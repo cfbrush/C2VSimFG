@@ -8,6 +8,7 @@ suggested change. Status: *proposed* until reviewed; reviewers mark *accepted* /
 | `C2VSimFG_1.5` | C2VSimFG 1.5 | DWR Version 1.5 (unmodified base) | — | — | base |
 | `C2VSimFG_1.5+cb1` | C2VSimFG 1.5+cb1 | Race condition: delivery adjustment - KOPTDV 11 to 10 (adjust GW pumping only; SW diversions are observed data) | Simulation/C2VSimFG.in (KOPTDV) | — | proposed |
 | `C2VSimFG_1.5+cb2` | C2VSimFG 1.5+cb2 | Race condition: multiple stream nodes sharing a GW node - CSTRM=0 at 83 confluence reach-end nodes (only the receiving node exchanges with the aquifer) | Simulation/Streams/C2VSimFG_Streams.dat (Stream Bed Parameters, CSTRM) | — | proposed |
+| `C2VSimFG_1.5+cb3` | C2VSimFG 1.5+cb3 | Erroneous diversion sources: Kings River spreading diversions 261/263/265 (FID/CID/ALTA spreading) IRDV 0 to 647 - draw from the Kings River instead of from nowhere (double-count) | Simulation/Streams/C2VSimFG_DiversionSpec.DAT (IRDV, rows 261/263/265) | — | proposed |
 
 ## How to review one change
 
