@@ -1,2 +1,2 @@
-..\bin\IWFM-2024.2.1594\Budget\Budget_x64.exe C2VSimFG_Budget.in
+..\bin\IWFM-2025.0.1747\Budget_x64.exe C2VSimFG_Budget.in
 pause

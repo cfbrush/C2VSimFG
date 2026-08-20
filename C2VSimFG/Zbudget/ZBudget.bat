@@ -1,2 +1,2 @@
-..\Bin\IWFM-2024.2.1594\ZBudget\ZBudget_x64.exe ZBudget.in
+..\bin\IWFM-2025.0.1747\ZBudget_x64.exe ZBudget.in
 pause

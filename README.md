@@ -17,8 +17,11 @@ accept or reject items individually. See **CHANGES.md** for the tag → change m
 
 Not tracked (see `.gitignore`): `C2VSimFG/bin/` (IWFM executables — obtain the version named in
 Log.txt from DWR), `C2VSimFG/Excel/` (post-processing workbooks), `C2VSimFG/Results/`,
-`*.out`, `*.hdf`, `*.bud` (model outputs). Copy the DWR release's `bin/` folder into
-`C2VSimFG/bin/` to run the model.
+`*.out`, `*.hdf`, `*.bud` (model outputs). Copy the required IWFM executables into
+`C2VSimFG/bin/` to run the model: the base release and changes cb1-cb4 run with IWFM 2024.2.1594
+(from the DWR release); change cb5 onward runs with IWFM-2025.0.1747 (DWR IWFM download) in
+`C2VSimFG/bin/IWFM-2025.0.1747/` - the Log.txt IWFM_version column records which engine each
+version uses.
 
 Files over 100 MB (crop/native/urban area time series, precipitation, DelivArea/RchgArea .dbf) are stored
 with **Git LFS** — run `git lfs install` before cloning so they check out as real files, not pointers.

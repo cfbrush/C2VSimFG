@@ -10,6 +10,7 @@ suggested change. Status: *proposed* until reviewed; reviewers mark *accepted* /
 | `C2VSimFG_1.5+cb2` | C2VSimFG 1.5+cb2 | Race condition: multiple stream nodes sharing a GW node - CSTRM=0 at 83 confluence reach-end nodes (only the receiving node exchanges with the aquifer) | Simulation/Streams/C2VSimFG_Streams.dat (Stream Bed Parameters, CSTRM) | — | proposed |
 | `C2VSimFG_1.5+cb3` | C2VSimFG 1.5+cb3 | Erroneous diversion sources: Kings River spreading diversions 261/263/265 (FID/CID/ALTA spreading) IRDV 0 to 647 - draw from the Kings River instead of from nowhere (double-count) | Simulation/Streams/C2VSimFG_DiversionSpec.DAT (IRDV, rows 261/263/265) | — | proposed |
 | `C2VSimFG_1.5+cb4` | C2VSimFG 1.5+cb4 | Kings River Nov-Feb diversions: cap FID/CID/ALTA crop (AG) diversions at crop demand and move the surplus to the paired spreading diversions (Diversions.DAT cols 260-265, 237 month-values) | Simulation/Streams/C2VSimFG_Diversions.DAT (cols 260/261, 262/263, 264/265, Nov-Feb rows) | cb3 (spreading diversions must draw from node 647) | proposed |
+| `C2VSimFG_1.5+cb5` | C2VSimFG 1.5+cb5 | Upgrade to IWFM 2025.0.1747: root-zone file converted 4.11 to 4.12 (adds per-land-use surface-flow destinations via new SurfFlowDest file; routing unchanged), executables and version banners updated | Simulation/RootZone/C2VSimFG_RootZone.dat (4.11 to 4.12); NEW Simulation/RootZone/C2VSimFG_SurfFlowDest.dat; IWFM version banner in 36 input files; 4 .bat files; README.md | — | proposed |
 
 ## How to review one change
 
